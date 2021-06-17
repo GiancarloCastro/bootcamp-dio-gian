@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bootcamp-gian": {
+    "homebroker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bootcamp-gian",
+            "outputPath": "dist/homebroker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bootcamp-gian:build:production"
+              "browserTarget": "homebroker:build:production"
             },
             "development": {
-              "browserTarget": "bootcamp-gian:build:development"
+              "browserTarget": "homebroker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bootcamp-gian:build"
+            "browserTarget": "homebroker:build"
           }
         },
         "test": {
@@ -98,9 +98,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "bootcamp-gian"
+  "defaultProject": "homebroker"
 }
